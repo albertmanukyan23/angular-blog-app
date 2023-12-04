@@ -1,0 +1,18 @@
+<div class="card shadow-effect h-100" *ngIf="homeComponentFeaturedCourse" [routerLink]="['/post', homeComponentFeaturedCourse.id]">
+    <img
+      src="{{homeComponentFeaturedCourse.data.postImgPath}}"
+      alt="post-image"
+      class="card-image-top"
+    />
+
+
+  <div class="card-body">
+    <small class="bg-light text-danger text-center">{{homeComponentFeaturedCourse.data.category.category}}</small>
+    <small class="bg-light text-success text-center ml-3"  style="margin-left: 10px" >Featured</small>
+    <small class="bg-light text-info text-center ml-3"  style="margin-left: 10px" >Views-{{homeComponentFeaturedCourse.data.views}}</small>
+
+    <h5 class="mt-1">{{homeComponentFeaturedCourse.data.title}}</h5>
+    <p>{{homeComponentFeaturedCourse.data.excerpt}}</p>
+    <small class="bg-light text-warning text-center ml-3">LAST UPDATED - {{homeComponentFeaturedCourse.data.createdAt.toMillis() | date}} </small>
+  </div>
+</div>
